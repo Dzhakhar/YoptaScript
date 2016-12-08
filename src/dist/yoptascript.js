@@ -64,7 +64,7 @@
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      */
 
 
-	var _words = __webpack_require__(3);
+	var _words = __webpack_require__(2);
 
 	var _words2 = _interopRequireDefault(_words);
 
@@ -102,8 +102,7 @@
 	exports.default = Yopta;
 
 /***/ },
-/* 2 */,
-/* 3 */
+/* 2 */
 /***/ function(module, exports) {
 
 	"use strict";
