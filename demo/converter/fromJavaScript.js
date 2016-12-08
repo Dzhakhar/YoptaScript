@@ -1,3 +1,9 @@
+/*!
+ * YoptaScript v0.2.6 (https://yopta.space)
+ * Copyright (c) 2016 Yopta.Space project and Contributors
+ * Licensed under the MIT license
+ */
+
 /* Отсортировано
  * Для перевода из js в yopta
  */
@@ -553,6 +559,10 @@ var dictionaryFromJs = [
 	[
 		"reverse",
 		"шухильмеМухильме"
+	],
+	[
+		"'use strict'",
+		"\"дали строгача\""
 	],
 	[
 		"elementFromPoint",
@@ -1287,6 +1297,10 @@ var dictionaryFromJs = [
 		"щаТяПодвину"
 	],
 	[
+		"Promise",
+		"СловоМужика"
+	],
+	[
 		"onoffline",
 		"покаОффнусь"
 	],
@@ -1353,6 +1367,14 @@ var dictionaryFromJs = [
 	[
 		"log2",
 		"гопорифмПо2"
+	],
+	[
+		"exports",
+		"предъявляет"
+	],
+	[
+		"let",
+		"участковый"
 	],
 	[
 		"Abstract",
@@ -1577,6 +1599,10 @@ var dictionaryFromJs = [
 	[
 		"static",
 		"попонятия"
+	],
+	[
+		"\\=\\=",
+		"однахуйня"
 	],
 	[
 		"writeln",
@@ -1879,6 +1905,10 @@ var dictionaryFromJs = [
 		"агопинус"
 	],
 	[
+		"export",
+		"предъявa"
+	],
+	[
 		"debugger",
 		"логопед"
 	],
@@ -1915,10 +1945,6 @@ var dictionaryFromJs = [
 		"двойные"
 	],
 	[
-		"export",
-		"излабас"
-	],
-	[
 		"Float",
 		"плавник"
 	],
@@ -1949,6 +1975,10 @@ var dictionaryFromJs = [
 	[
 		"\\=\\=",
 		"эквалио"
+	],
+	[
+		"\\=\\=\\=",
+		"блябуду"
 	],
 	[
 		"charset",
@@ -2171,6 +2201,14 @@ var dictionaryFromJs = [
 		"сквирт"
 	],
 	[
+		"module",
+		"братва"
+	],
+	[
+		"default",
+		"пахану"
+	],
+	[
 		"function",
 		"йопта"
 	],
@@ -2305,6 +2343,10 @@ var dictionaryFromJs = [
 	[
 		"max",
 		"хуйло"
+	],
+	[
+		"global",
+		"общак"
 	],
 	[
 		"break",

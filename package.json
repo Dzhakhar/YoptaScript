@@ -1,0 +1,33 @@
+{
+  "name": "yoptascript",
+  "version": "1.0.0",
+  "description": "Скриптовый язык программирования для гопников и реальных пацанов https://yopta.space",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-runtime": "^6.18.0",
+    "webpack": "^1.13.3"
+  },
+  "scripts": {
+    "prepublish": "webpack && babel src/lib/yoptascript.jsx --out-file index.js --source-map --presets es2015",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samgozman/YoptaScript.git"
+  },
+  "author": "Sam Gozman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samgozman/YoptaScript/issues"
+  },
+  "homepage": "https://github.com/samgozman/YoptaScript"
+}
