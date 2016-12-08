@@ -17,7 +17,7 @@
     "webpack": "^1.13.3"
   },
   "scripts": {
-    "prepublish": "webpack && babel src/lib/yoptascript.jsx --out-file index.js --source-map --presets es2015",
+    "prepublish": "webpack && babel src/dist/yoptascript.js --out-file index.js --source-map --presets es2015",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

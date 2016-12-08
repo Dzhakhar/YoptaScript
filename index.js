@@ -1,24 +1,158 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+/******/(function (modules) {
+	// webpackBootstrap
+	/******/ // The module cache
+	/******/var installedModules = {};
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	/******/ // The require function
+	/******/function __webpack_require__(moduleId) {
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+		/******/ // Check if module is in cache
+		/******/if (installedModules[moduleId])
+			/******/return installedModules[moduleId].exports;
 
-var Yopta = function () {
-  function Yopta(props) {
-    _classCallCheck(this, Yopta);
-  }
+		/******/ // Create a new module (and put it into the cache)
+		/******/var module = installedModules[moduleId] = {
+			/******/exports: {},
+			/******/id: moduleId,
+			/******/loaded: false
+			/******/ };
 
-  _createClass(Yopta, [{
-    key: "compile",
-    value: function compile() {}
-  }]);
+		/******/ // Execute the module function
+		/******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 
-  return Yopta;
-}();
+		/******/ // Flag the module as loaded
+		/******/module.loaded = true;
 
-exports.default = Yopta;
+		/******/ // Return the exports of the module
+		/******/return module.exports;
+		/******/
+	}
+
+	/******/ // expose the modules object (__webpack_modules__)
+	/******/__webpack_require__.m = modules;
+
+	/******/ // expose the module cache
+	/******/__webpack_require__.c = installedModules;
+
+	/******/ // __webpack_public_path__
+	/******/__webpack_require__.p = "";
+
+	/******/ // Load entry module and return exports
+	/******/return __webpack_require__(0);
+	/******/
+})(
+/************************************************************************/
+/******/[
+/* 0 */
+/***/function (module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(1);
+
+	/***/
+},
+/* 1 */
+/***/function (module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () {
+		function defineProperties(target, props) {
+			for (var i = 0; i < props.length; i++) {
+				var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+			}
+		}return function (Constructor, protoProps, staticProps) {
+			if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+		};
+	}(); /*!
+       * YoptaScript v0.2.6 (https://yopta.space)
+       * Copyright (c) 2016 Yopta.Space project and Contributors
+       * Licensed under the MIT license
+       */
+
+	var _words = __webpack_require__(2);
+
+	var _words2 = _interopRequireDefault(_words);
+
+	function _interopRequireDefault(obj) {
+		return obj && obj.__esModule ? obj : { default: obj };
+	}
+
+	function _classCallCheck(instance, Constructor) {
+		if (!(instance instanceof Constructor)) {
+			throw new TypeError("Cannot call a class as a function");
+		}
+	}
+
+	var Yopta = function () {
+		function Yopta() {
+			_classCallCheck(this, Yopta);
+		}
+
+		_createClass(Yopta, [{
+			key: 'compile',
+			value: function compile(yoptaCode) {
+				return yoptaCode.replace(/([а-яА-Я]+)/g, function (e) {
+					if (_words2.default[e]) {
+						return _words2.default[e];
+					} else {
+						return e;
+					}
+				});
+			}
+		}]);
+
+		return Yopta;
+	}();
+
+	var yopta = new Yopta();
+
+	if (typeof window !== 'undefined') {
+		var scripts = document.querySelectorAll('[language="YoptaScript"]');
+
+		if (scripts.length > 0) {
+			for (var i = 0; i < scripts.length; ++i) {
+				var elem = scripts[i];
+				elem.parentNode.removeChild(elem);
+				elem.innerHTML = yopta.compile(elem.innerHTML);
+				elem.removeAttribute("language");
+				document.body.appendChild(elem);
+			}
+		}
+	}
+
+	exports.compiler = yopta.compile;
+	exports.default = Yopta;
+
+	/***/
+},
+/* 2 */
+/***/function (module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	/*!
+  * YoptaScript v0.2.6 (https://yopta.space)
+  * Copyright (c) 2016 Yopta.Space project and Contributors
+  * Licensed under the MIT license
+  */
+
+	// Меняем массив на объект key:value
+	var _WORDS_ = {
+		"эквалио": "==",
+		"шухер": "alert"
+	};
+
+	exports.default = _WORDS_;
+
+	/***/
+}
+/******/]);
