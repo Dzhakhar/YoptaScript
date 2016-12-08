@@ -6,7 +6,8 @@
 
 // Меняем массив на объект key:value
 const _WORDS_ = {
-  "эквалио":"=="
+  "эквалио":"==",
+  "шухер":"alert"
 }
 
 export default _WORDS_;

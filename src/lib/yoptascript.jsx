@@ -19,8 +19,19 @@ class Yopta {
 
 const yopta = new Yopta();
 
-if(window){
-  document.querySelectorAll('[language="YoptaScript"]').forEach(yopta.compile);
+if(typeof window !== 'undefined'){
+  let scripts = document.querySelectorAll('[language="YoptaScript"]');
+
+  if(scripts.length > 0){
+    for (let i = 0; i < scripts.length; ++i) {
+      let elem = scripts[i];
+      elem.parentNode.removeChild(elem);
+      elem.innerHTML = yopta.compile(elem.innerHTML);
+      elem.removeAttribute("language");
+      document.body.appendChild(elem);
+    }
+  }
 }
 
+exports.compiler = yopta.compile;
 export default Yopta;

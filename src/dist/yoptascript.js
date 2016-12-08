@@ -51,7 +51,7 @@
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -78,7 +78,7 @@
 	  }
 
 	  _createClass(Yopta, [{
-	    key: "compile",
+	    key: 'compile',
 	    value: function compile(yoptaCode) {
 	      return yoptaCode.replace(/([а-яА-Я]+)/g, function (e) {
 	        if (_words2.default[e]) {
@@ -95,10 +95,21 @@
 
 	var yopta = new Yopta();
 
-	if (window) {
-	  document.querySelectorAll('[language="YoptaScript"]').forEach(yopta.compile);
+	if (typeof window !== 'undefined') {
+	  var scripts = document.querySelectorAll('[language="YoptaScript"]');
+
+	  if (scripts.length > 0) {
+	    for (var i = 0; i < scripts.length; ++i) {
+	      var elem = scripts[i];
+	      elem.parentNode.removeChild(elem);
+	      elem.innerHTML = yopta.compile(elem.innerHTML);
+	      elem.removeAttribute("language");
+	      document.body.appendChild(elem);
+	    }
+	  }
 	}
 
+	exports.compiler = yopta.compile;
 	exports.default = Yopta;
 
 /***/ },
@@ -118,7 +129,8 @@
 
 	// Меняем массив на объект key:value
 	var _WORDS_ = {
-	  "эквалио": "=="
+	  "эквалио": "==",
+	  "шухер": "alert"
 	};
 
 	exports.default = _WORDS_;
