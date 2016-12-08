@@ -171,3 +171,16 @@ YoptaScript
 * Скрипт транслирует всё что между двойных кавычек
 * Пока нет альтернативы для фигурных и квадратных скобок, что усложняет работу
 * Игнорирует комментарии и тоже переводит их содержимое
+
+## Contributing
+На данный момент в файле `src/lib/yoptascript.js` описана вся логика конвертера.
+Словарь описан в `src/lib/words.js`.
+Что бы начать контрибьютить проект, проделайте следующие шаги.
+```
+git clone https://github.com/samgozman/YoptaScript.git
+cd YoptaScript
+npm install
+webpack --watch --progress --colors
+google-chrome test.html
+```
+И пишите ваш код =)
