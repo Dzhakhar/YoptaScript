@@ -175,7 +175,7 @@ YoptaScript
 ## Contributing
 На данный момент в файле `src/lib/yoptascript.js` описана вся логика конвертера.
 Словарь описан в `src/lib/words.js`.
-Что бы начать контрибьютить проект, проделайте следующие шаги.
+Что бы начать контрибьютить проект, проделайте следующие шаги, выполняя команды в вашей командной строке.
 ```
 git clone https://github.com/samgozman/YoptaScript.git
 cd YoptaScript
