@@ -126,6 +126,7 @@
 		}
 	}
 
+	exports.compiler = yopta.compile;
 	exports.default = Yopta;
 
 	/***/

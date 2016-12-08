@@ -3,7 +3,7 @@
  * Copyright (c) 2016 Yopta.Space project and Contributors
  * Licensed under the MIT license
  */
-import words from "./words.jsx";
+import words from "./words.js";
 
 class Yopta {
   compile(yoptaCode){

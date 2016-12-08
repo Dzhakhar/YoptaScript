@@ -5,7 +5,7 @@ var APP_DIR = path.resolve(__dirname, 'src/lib');
 
 var config = {
     entry: {
-        yoptascript: [APP_DIR + "/yoptascript.jsx"]
+        yoptascript: [APP_DIR + "/yoptascript.js"]
     },
     output: {
         path: BUILD_DIR,
@@ -14,7 +14,7 @@ var config = {
     module: {
         loaders: [
             {
-                test: /\.jsx?/,
+                test: /\.js?/,
                 include: APP_DIR,
                 loader: 'babel'
             }
